@@ -16,7 +16,7 @@ export default function HomePage() {
   const [count, setCount] = useState(0);
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b">
+    <main className="flex min-h-full flex-col items-center justify-center bg-gradient-to-b">
       <h1 className="p-4 text-2xl font-bold">Your Code should be here</h1>
       <div className="flex flex-col items-center justify-center">
         <p>count is: {count}</p>
