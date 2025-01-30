@@ -1,10 +1,9 @@
 "use client";
 
-import React, { useState } from "react";
-import { ReactFlow } from "@xyflow/react";
+import React from "react";
 
 import "@xyflow/react/dist/style.css";
-import { Button } from "@/components/ui/button";
+import { Details } from "@/app/_components/details";
 
 const initialNodes = [
   { id: "1", position: { x: 100, y: 100 }, data: { label: "1" } },
@@ -13,18 +12,9 @@ const initialNodes = [
 const initialEdges = [{ id: "e1-2", source: "1", target: "2" }];
 
 export default function HomePage() {
-  const [count, setCount] = useState(0);
-
   return (
-    <main className="flex min-h-full flex-col items-center justify-center bg-gradient-to-b">
-      <h1 className="p-4 text-2xl font-bold">Your Code should be here</h1>
-      <div className="flex flex-col items-center justify-center">
-        <p>count is: {count}</p>
-        <Button onClick={() => setCount(count + 1)}>Click me</Button>
-      </div>
-      <div style={{ width: "50vw", height: "50vh" }}>
-        <ReactFlow nodes={initialNodes} edges={initialEdges} />
-      </div>
+    <main className="flex min-h-full">
+      <Details />
     </main>
   );
 }

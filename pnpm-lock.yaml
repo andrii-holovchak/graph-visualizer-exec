@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@fontsource/public-sans':
+        specifier: ^5.1.2
+        version: 5.1.2
       '@radix-ui/react-avatar':
         specifier: ^1.1.2
         version: 1.1.2(@types/react-dom@18.3.5(@types/react@18.3.18))(@types/react@18.3.18)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -141,6 +144,9 @@ packages:
 
   '@floating-ui/utils@0.2.9':
     resolution: {integrity: sha512-MDWhGtE+eHw5JW7lq4qhc5yRLS11ERl1c7Z6Xd0a58DozHES6EnNNwUWbMiG4J9Cgj053Bhk8zvlhFYKVhULwg==}
+
+  '@fontsource/public-sans@5.1.2':
+    resolution: {integrity: sha512-VY/2N8hfhFgP/3lkk/WdGX27/0wp+ajX9/E4bb+O1BS5c+OUfJG7FChIqYRKZUe8n2jl8pOVjaB93PfyVQS9Hg==}
 
   '@humanwhocodes/config-array@0.13.0':
     resolution: {integrity: sha512-DZLEEqFWQFiyK6h5YIeynKx7JlvCYWL0cImfSRXZ9l4Sg2efkFGTuFf6vzXjK1cq6IYkU+Eg/JizXw+TD2vRNw==}
@@ -2326,6 +2332,8 @@ snapshots:
       react-dom: 18.3.1(react@18.3.1)
 
   '@floating-ui/utils@0.2.9': {}
+
+  '@fontsource/public-sans@5.1.2': {}
 
   '@humanwhocodes/config-array@0.13.0':
     dependencies:
