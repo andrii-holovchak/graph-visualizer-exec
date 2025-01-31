@@ -7,7 +7,7 @@ import { VulnerabilityStatistic } from "@/app/(dashboard)/_components/vulnerabil
 
 export function Vulnerabilities() {
   return (
-    <Card className="flex h-fit flex-1 flex-col gap-5">
+    <Card className="flex h-fit min-h-[744px] flex-1 flex-col gap-5">
       <Section title="Lorem Lorem Lorem">
         <VulnerabilityGraph />
       </Section>

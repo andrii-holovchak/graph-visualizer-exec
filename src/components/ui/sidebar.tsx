@@ -18,6 +18,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import { Trigger } from "@/components/layout/app-sidebar/trigger";
 
 const SIDEBAR_COOKIE_NAME = "sidebar:state";
 const SIDEBAR_COOKIE_MAX_AGE = 60 * 60 * 24 * 7;
@@ -202,21 +203,24 @@ const Sidebar = React.forwardRef<
 
     if (isMobile) {
       return (
-        <Sheet open={openMobile} onOpenChange={setOpenMobile} {...props}>
-          <SheetContent
-            data-sidebar="sidebar"
-            data-mobile="true"
-            className="bg-sidebar text-sidebar-foreground w-[--sidebar-width] p-0 [&>button]:hidden"
-            style={
-              {
-                "--sidebar-width": SIDEBAR_WIDTH_MOBILE,
-              } as React.CSSProperties
-            }
-            side={side}
-          >
-            <div className="flex h-full w-full flex-col">{children}</div>
-          </SheetContent>
-        </Sheet>
+        <>
+          <Trigger />
+          <Sheet open={openMobile} onOpenChange={setOpenMobile} {...props}>
+            <SheetContent
+              data-sidebar="sidebar"
+              data-mobile="true"
+              className="bg-sidebar text-sidebar-foreground w-[--sidebar-width] p-0 [&>button]:hidden"
+              style={
+                {
+                  "--sidebar-width": SIDEBAR_WIDTH_MOBILE,
+                } as React.CSSProperties
+              }
+              side={side}
+            >
+              <div className="flex h-full w-full flex-col">{children}</div>
+            </SheetContent>
+          </Sheet>
+        </>
       );
     }
 
@@ -258,6 +262,7 @@ const Sidebar = React.forwardRef<
             data-sidebar="sidebar"
             className="bg-sidebar group-data-[variant=floating]:border-sidebar-border flex h-full w-full flex-col group-data-[variant=floating]:rounded-lg group-data-[variant=floating]:border group-data-[variant=floating]:shadow"
           >
+            <Trigger />
             {children}
           </div>
         </div>
@@ -271,7 +276,7 @@ const SidebarTrigger = React.forwardRef<
   React.ElementRef<typeof Button>,
   React.ComponentProps<typeof Button>
 >(({ className, onClick, ...props }, ref) => {
-  const { toggleSidebar, state } = useSidebar();
+  const { toggleSidebar, state, isMobile } = useSidebar();
 
   return (
     <Button
@@ -280,8 +285,8 @@ const SidebarTrigger = React.forwardRef<
       variant="ghost"
       size="icon"
       className={cn(
-        "z-30 h-8 w-8 rounded-full border-[3px] border-[#F0F1F3] bg-[#00732E] hover:bg-[#00732E]",
-        state === "collapsed" && "rotate-180",
+        "z-30 h-8 w-8 flex-shrink-0 rounded-full border-[3px] border-[#F0F1F3] bg-[#00732E] hover:bg-[#00732E]",
+        (state === "collapsed" || isMobile) && "rotate-180",
         className,
       )}
       onClick={(event) => {

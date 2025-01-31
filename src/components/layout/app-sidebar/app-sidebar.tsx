@@ -14,7 +14,6 @@ import { Trigger } from "@/components/layout/app-sidebar/trigger";
 export function AppSidebar() {
   return (
     <Sidebar variant="sidebar">
-      <Trigger />
       <SidebarContent>
         <SidebarGroup>
           <SidebarGroupContent>

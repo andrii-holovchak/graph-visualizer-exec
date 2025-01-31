@@ -12,6 +12,7 @@ import Link from "next/link";
 export function Navigation() {
   const pathname = usePathname();
   console.log(pathname);
+
   return (
     <SidebarMenu>
       {NAVIGATION_LINKS.map((item) => {
