@@ -50,7 +50,7 @@ export function CardTable<Data>({ columns, data }: CardTableProps<Data>) {
                 {columns.map((col) => (
                   <TableCell
                     key={col.key.toString()}
-                    className={cn("px-6 py-3", col.className)}
+                    className={cn("px-6 py-3 pl-2.5", col.className)}
                   >
                     {col.render ? col.render(row) : (row[col.key] as string)}
                   </TableCell>
