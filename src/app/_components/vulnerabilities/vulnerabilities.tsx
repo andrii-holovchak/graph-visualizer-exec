@@ -1,3 +1,5 @@
+"use client";
+
 import { Card } from "@/components/ui/card";
 import { VulnerabilityGraph } from "@/app/_components/vulnerabilities/vulnerability-graph";
 import { Section } from "@/components/ui/section";

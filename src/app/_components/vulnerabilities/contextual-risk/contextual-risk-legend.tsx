@@ -1,0 +1,44 @@
+import { type VulnerabilitiesBySeverity } from "@/app/_utils/group-vulnerabilities-by-severity";
+
+interface Props {
+  vulnerabilities: VulnerabilitiesBySeverity;
+}
+
+const Item = ({
+  title,
+  count,
+  color,
+}: {
+  title: string;
+  color: string;
+  count: number;
+}) => {
+  return (
+    <div className="flex items-center gap-[5px] text-sm text-[#383874]">
+      <div className="size-[7px] rounded-full" style={{ background: color }} />
+      <span className="font-bold">{count}</span>
+      <span className="">{title}</span>
+    </div>
+  );
+};
+
+const ContextualRiskLegend = ({ vulnerabilities }: Props) => {
+  return (
+    <div className="flex flex-col gap-5">
+      <Item
+        color="#C6190D"
+        title="Critical"
+        count={vulnerabilities.critical.length}
+      />
+      <Item color="#E5372B" title="High" count={vulnerabilities.high.length} />
+      <Item
+        color="#EBA622"
+        title="Medium"
+        count={vulnerabilities.medium.length}
+      />
+      <Item color="#08B94E" title="Low" count={vulnerabilities.low.length} />
+    </div>
+  );
+};
+
+export default ContextualRiskLegend;
