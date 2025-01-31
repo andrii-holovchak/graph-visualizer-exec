@@ -34,7 +34,7 @@ export function CardTable<Data>({ columns, data }: CardTableProps<Data>) {
             {columns.map((col) => (
               <TableHead
                 key={col.key.toString()}
-                className={cn("p-3 pl-6 pr-5 text-left", col.className)}
+                className={cn("p-3 px-3 pr-4 text-left", col.className)}
               >
                 {col.label}
               </TableHead>
