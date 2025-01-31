@@ -9,7 +9,6 @@ import {
 import { Navigation } from "@/components/layout/app-sidebar/navigation";
 import { Settings } from "@/components/layout/app-sidebar/settings";
 import { User } from "@/components/layout/app-sidebar/user";
-import { Trigger } from "@/components/layout/app-sidebar/trigger";
 
 export function AppSidebar() {
   return (
