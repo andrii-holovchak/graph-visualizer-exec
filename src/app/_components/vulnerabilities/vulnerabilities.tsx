@@ -9,7 +9,9 @@ export function Vulnerabilities() {
       <Section title="Lorem Lorem Lorem">
         <VulnerabilityGraph />
       </Section>
-      <ContextualRisk />
+      <Section title="Lorem ipsum dolor sit" className="flex-[0.49]">
+        <ContextualRisk />
+      </Section>
     </Card>
   );
 }

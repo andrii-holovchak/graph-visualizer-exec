@@ -21,7 +21,7 @@ export default function RootLayout({
       <body>
         <SidebarProvider>
           <AppSidebar />
-          <div className="px w-full px-9 py-7">{children}</div>
+          <div className="px h-lvh w-full px-9 py-7">{children}</div>
         </SidebarProvider>
       </body>
     </html>

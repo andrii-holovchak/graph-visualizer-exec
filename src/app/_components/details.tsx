@@ -6,7 +6,7 @@ import { Check } from "lucide-react";
 
 export function Details() {
   return (
-    <Card className="min-w-[385px] flex-[0.49]">
+    <Card className="max-w-[385px] flex-1 overflow-auto">
       <Section title="Description">
         Lorem ipsum dolor sit amet consectetur. Aenean sodales pellentesque
         gravida nibh et magna faucibus. Dui commodo ut metus amet egestas
