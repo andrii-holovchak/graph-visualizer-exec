@@ -1,8 +1,8 @@
 import React from "react";
 
 import "@xyflow/react/dist/style.css";
-import { Details } from "@/app/_components/details";
-import { Vulnerabilities } from "@/app/_components/vulnerabilities/vulnerabilities";
+import { Details } from "@/app/(dashboard)/_components/details";
+import { Vulnerabilities } from "@/app/(dashboard)/_components/vulnerabilities/vulnerabilities";
 
 export default function HomePage() {
   return (

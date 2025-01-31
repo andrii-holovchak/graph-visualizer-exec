@@ -1,7 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Section } from "@/components/ui/section";
 import { Separator } from "@/components/ui/separator";
-import DetailList from "@/components/ui/detail-list";
+import { DetailList } from "@/components/ui/detail-list";
 import { Check } from "lucide-react";
 
 export function Details() {

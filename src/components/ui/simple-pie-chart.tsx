@@ -9,7 +9,13 @@ interface Props {
   nameKey: string;
 }
 
-const SimplePieChart = ({ data, label, config, dataKey, nameKey }: Props) => {
+export function SimplePieChart({
+  data,
+  label,
+  config,
+  dataKey,
+  nameKey,
+}: Props) {
   return (
     <ChartContainer config={config} className="aspect-square h-[169px]">
       <PieChart>
@@ -40,6 +46,4 @@ const SimplePieChart = ({ data, label, config, dataKey, nameKey }: Props) => {
       </PieChart>
     </ChartContainer>
   );
-};
-
-export default SimplePieChart;
+}

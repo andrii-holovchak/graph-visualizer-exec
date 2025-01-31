@@ -9,7 +9,7 @@ import {
 import { cn } from "@/lib/utils";
 import { type ReactNode, useState } from "react";
 import { Card } from "@/components/ui/card";
-import Pagination from "@/components/ui/pagination";
+import { Pagination } from "@/components/ui/pagination";
 
 export interface CardTableColumn<Data> {
   key: keyof Data;
@@ -23,10 +23,7 @@ interface CardTableProps<Data> {
   data: Data[];
 }
 
-export default function CardTable<Data>({
-  columns,
-  data,
-}: CardTableProps<Data>) {
+export function CardTable<Data>({ columns, data }: CardTableProps<Data>) {
   const [page, setPage] = useState(1);
 
   return (

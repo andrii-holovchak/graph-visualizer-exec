@@ -21,5 +21,3 @@ export function DetailList({ items }: DetailListProps) {
     </div>
   );
 }
-
-export default DetailList;

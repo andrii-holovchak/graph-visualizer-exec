@@ -1,9 +1,9 @@
 "use client";
 
 import { Card } from "@/components/ui/card";
-import { VulnerabilityGraph } from "@/app/_components/vulnerabilities/vulnerability-graph";
+import { VulnerabilityGraph } from "@/app/(dashboard)/_components/vulnerabilities/vulnerability-graph";
 import { Section } from "@/components/ui/section";
-import { VulnerabilityStatistic } from "@/app/_components/vulnerabilities/vulnerability-statistic/vulnerability-statistic";
+import { VulnerabilityStatistic } from "@/app/(dashboard)/_components/vulnerabilities/vulnerability-statistic/vulnerability-statistic";
 
 export function Vulnerabilities() {
   return (
