@@ -7,6 +7,7 @@ import {
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
 import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 export function Navigation() {
   const pathname = usePathname();
@@ -19,13 +20,13 @@ export function Navigation() {
         return (
           <SidebarMenuItem key={item.title}>
             <SidebarMenuButton asChild size="lg" isActive={isActive}>
-              <a href={item.url}>
+              <Link href={item.url}>
                 <item.icon
                   className="!size-5"
                   stroke={isActive ? "#000" : "#A3A9B6"}
                 />
                 <span>{item.title}</span>
-              </a>
+              </Link>
             </SidebarMenuButton>
           </SidebarMenuItem>
         );
